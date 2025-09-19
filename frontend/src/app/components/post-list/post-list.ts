@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { Post, PostService } from '../../services/post';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-post-list',
   standalone: true,
-  imports: [CommonModule, DatePipe],
+  imports: [CommonModule, DatePipe, RouterModule],
   templateUrl: './post-list.html',
   styleUrls: ['./post-list.css']
 })

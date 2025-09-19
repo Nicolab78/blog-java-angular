@@ -5,5 +5,10 @@ export const routes: Routes = [
   {
     path: '',
     component: PostListComponent
+  },
+  {
+    path: 'posts/:id',
+    loadComponent: () =>
+      import('./components/post-detail/post-detail').then(m => m.PostDetailComponent)
   }
 ];

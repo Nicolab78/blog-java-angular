@@ -5,7 +5,7 @@ import { PostListComponent } from './components/post-list/post-list';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PostListComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
