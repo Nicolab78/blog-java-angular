@@ -1,0 +1,23 @@
+<div class="home-container">
+  <h1>Bienvenue sur Mon Blog</h1>
+  
+  <section class="recent-posts">
+    <h2>Derniers articles</h2>
+    
+    <div *ngIf="loading">Chargement...</div>
+    
+    <div class="posts-grid" *ngIf="!loading">
+      <article *ngFor="let post of recentPosts" class="post-card">
+        <h3>
+          <a [routerLink]="['/posts', post.id]">{{ post.title }}</a>
+        </h3>
+        <p>{{ post.content }}</p>
+        <div class="post-date">
+          Publié le {{ post.createdAt | date:'dd/MM/yyyy' }}
+        </div>
+      </article>
+    </div>
+    
+    <a routerLink="/posts" class="view-all-btn">Voir tous les articles</a>
+  </section>
+</div>
